@@ -1,0 +1,20 @@
+{{/* Enable video to be loaded from local page dir or media library at `static/img/`. */}}
+{{ $path := "" }}
+{{ $root_dir := "" }}
+{{ if .Get "library" }}
+{{ $path = "logos/" }}
+{{ $root_dir = "static/" }}
+{{ end }}
+
+{{ $fig_one := printf "%s%s" $path (.Get "src1") }}
+{{ $fig_two := printf "%s%s" $path (.Get "src2") }}
+{{ $fig_three := printf "%s%s" $path (.Get "src3") }}
+<div class="col-lg-4" style="padding-left: 0; padding-top: 0;">
+      <img src="{{$fig_one}}" width="150px">
+</div>
+<div class="col-lg-4" style="padding-left: 0; padding-top: 0;">
+      <img src="{{$fig_two}}" width="150px">
+</div>
+<div class="col-lg-4" style="padding-left: 0; padding-top: 0;">
+      <img src="{{$fig_three}}" width="150px">
+</div>

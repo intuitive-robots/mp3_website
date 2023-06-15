@@ -1,0 +1,67 @@
+{{/* Enable video to be loaded from local page dir or media library at `static/img/`. */}}
+{{ $path := "" }}
+{{ $title1 := " "}}
+{{ $title2 := " "}}
+{{ $title3 := " "}}
+{{ $root_dir := "" }}
+{{ if .Get "library" }}
+{{ $path = "img/" }}
+{{ $root_dir = "static/" }}
+{{ end }}
+
+{{ $video_one := printf "%s%s" $path (.Get "src1") }}
+{{ $video_two := printf "%s%s" $path (.Get "src2") }}
+{{ $video_three := printf "%s%s" $path (.Get "src3") }}
+{{ $title1 = printf "%s" (.Get "title1") }}
+{{ $title2 = printf "%s" (.Get "title2") }}
+{{ $title3 = printf "%s" (.Get "title3") }}
+
+<style>
+  .video-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .video-container figure {
+    width: 30%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+      margin-right: 10px;
+  }
+  .video-container figure:last-child {
+      margin-right: 0;
+  }
+</style>
+
+<div class="video-container" style="padding-top: 10px;padding-bottom: 20px;">
+    <figure>
+    <video controls autoplay muted loop>
+        <source src="{{ $video_one }}" type="video/webm">
+    </video>
+       <figcaption style="text-align: center;"> {{$title1}} </figcaption>
+    </figure>
+    <figure>
+    <video controls autoplay muted loop>
+        <source src="{{ $video_two }}" type="video/webm">
+    </video>
+       <figcaption style="text-align: center;"> {{$title2}} </figcaption>
+    </figure>
+    <figure>
+    <video controls autoplay muted loop>
+        <source src="{{ $video_three }}" type="video/webm">
+    </video>
+       <figcaption style="text-align: center;"> {{$title3}} </figcaption>
+    </figure>
+</div>
+<!--<div class="video-container" style="padding-right: 4px; padding-top: 10px; padding-bottom: 20px;">-->
+<!--    <video controls autoplay muted loop>-->
+<!--        <source src="{{ $video_two }}" type="video/webm">-->
+<!--    </video>-->
+<!--&lt;!&ndash;    <div style="text-align: center;"> {{$title2}} </div>&ndash;&gt;-->
+<!--</div>-->
+<!--<div class="video-container" style="padding-right: 0; padding-top: 10px;padding-bottom: 20px;">-->
+<!--    <video controls autoplay muted loop>-->
+<!--        <source src="{{ $video_three }}" type="video/webm">-->
+<!--    </video>-->
+<!--&lt;!&ndash;    <div style="text-align: center;"> {{$title3}} </div>&ndash;&gt;-->
+<!--</div>-->
