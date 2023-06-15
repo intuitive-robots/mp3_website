@@ -41,9 +41,9 @@ as a black-box optimization problem. We refer this setting as **MP3-BB**.
                 src2="img/Videos/boxpush/bpdense_bbrl_ppo.mp4" title2="MP3-PPO-BB"
                 src3="img/Videos/boxpush/bpdense_bbrl_trpl.mp4" title3="MP3-BB">}}
 ### Box-Pushing (Sparse Reward)
-{{< triplevideo src1="img/BPsparse1_ppo.mp4" title1="PPO" 
-                src2="img/BPsparse1_mp3_bb_ppo.mp4" title2="MP3-PPO-BB"
-                src3="img/BPsparse1_mp3_bb_1.mp4" title3="MP3-BB">}}
+{{< triplevideo src1="img/Videos/boxpushingsparse/BPsparse1_ppo_1.mp4" title1="PPO" 
+                src2="img/Videos/boxpushingsparse/BPsparse1_mp3_bb_ppo.mp4" title2="MP3-PPO-BB"
+                src3="img/Videos/boxpushingsparse/BPsparse1_mp3_bb_2.mp4" title3="MP3-BB">}}
 ### Beerpong
 {{< triplevideo src1="img/Videos/beerpong/Beerpong_PPO.mp4" title1="PPO" 
                 src2="img/Videos/beerpong/Beerpong_BBRL_PPO.mp4" title2="MP3-PPO-BB"
