@@ -29,14 +29,21 @@ settings, as well as settings that require replanning.
 
 
 ## MP3-BB: Black-Box Reinforcement Learning
+Instead of generating atomic action for each state, we generate a whole trajectory of actions at once using movement primitives.
+This enables us to efficiently handle sparse and even non-Markovian rewards. In this setting, reinforcement learning is treated
+as a black-box optimization problem. We refer this setting as **MP3-BB**.
 ### Hopper Jump (Maximum Height)
 {{< triplevideo src1="img/Videos/hopper/hopper_ppo.mp4" title1="PPO" 
                 src2="img/Videos/hopper/hopper_bbrl_ppo.mp4" title2="MP3-PPO-BB"
                 src3="img/Videos/hopper/hopper_bbrl_trpl.mp4" title3="MP3-BB">}}
-### Box-Pushing
+### Box-Pushing (Dense Reward)
 {{< triplevideo src1="img/Videos/boxpush/bpdense-ppo.mp4" title1="PPO" 
                 src2="img/Videos/boxpush/bpdense_bbrl_ppo.mp4" title2="MP3-PPO-BB"
                 src3="img/Videos/boxpush/bpdense_bbrl_trpl.mp4" title3="MP3-BB">}}
+### Box-Pushing (Sparse Reward)
+{{< triplevideo src1="img/BPsparse1_ppo.mp4" title1="PPO" 
+                src2="img/BPsparse1_mp3_bb_ppo.mp4" title2="MP3-PPO-BB"
+                src3="img/BPsparse1_mp3_bb_1.mp4" title3="MP3-BB">}}
 ### Beerpong
 {{< triplevideo src1="img/Videos/beerpong/Beerpong_PPO.mp4" title1="PPO" 
                 src2="img/Videos/beerpong/Beerpong_BBRL_PPO.mp4" title2="MP3-PPO-BB"
@@ -46,6 +53,10 @@ settings, as well as settings that require replanning.
                 src2="img/Videos/table_tennis/TT4D_BBRL_PPO.mp4" title2="MP3-PPO-BB"
                 src3="img/Videos/table_tennis/TT4D_BBRL_TRPL.mp4" title3="MP3-BB">}}
 ## MP3-Replan: Replanning with Movement Primititves
+By incorperating dynamic-based movement primitives, such as DMPs (Dynamic Movement Primitives) and ProDMPs (Probabilistic Dynamic Movement Primitives),
+into our framework, we gain the ability to adapt the movement primitives during online execution. This capability enables us to effectively 
+handle unforeseen changes in the environment, such as shifting target positions or external perturbations. 
+In constrat to the black-box setting **MP3-BB**, we specifically designate this setting as **MP3-Replan**.
 ### Box-Pushing with Changing Targets
 {{< doublevideo src1="img/BoxPushingGC20_ppo.mp4" title1="PPO" 
     src2="img/BoxPushingGC20_mp3_replan.mp4" title2="MP3-Replan">}}
