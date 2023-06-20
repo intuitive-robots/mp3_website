@@ -3,29 +3,21 @@
 [//]: # ({{<image src1="logos/Logo_KIT.svg" src2= "logos/IRL_Logo_Light_blue.svg" src3="logos/canvas.png">}})
 {{< doublevideo src1="img/bbrl_beerpong.mp4" src2="img/TableTennis4D_1-43.mp4">}}
 # Abstract
-Movement primitives (MPs) have been a popular tool for motion generation in reinforcement learning (RL). 
-MPs offer a concise representation of motion through desired trajectories, 
-facilitating efficient exploration in the MP’s parameter space and producing smooth
-motions. Although many early successes in robot RL have been achieved by combining
-RL with MPs, these approaches are often limited to learning a single stroke-based motion
-that can not be adapted to task variations or during motion execution. As a result, the
-research community has lost interest in RL with MPs and shifted its focus to the development 
-of deep RL methods with atomic action spaces. Recently, we presented a new deep
-RL method for the non-linear adaptation of MP parameters to different task variations
-while leveraging efficient parameter-based exploration. Here, the problem of selecting the
-movement primitive parameters was treated as a black box, in other word, the selected
-parameters were executed throughout the whole episode and the resulting return was collected. 
-While this method outperformed standard step-based RL in many domains, it does
-not allow for online adaptation of the motion which rules out stochastic domains where
-feedback is required. This paper is an extension of this work where we generalize this
-approach to learning replanning strategies that allow for adaptation of the MP parameters 
-throughout motion execution. To do so, our method uses a recent reformulation of the dynamic 
-movement primitives (DMPs) which provides a simple integration of DMPs
-into deep architectures while it allows smooth replanning as opposed to the probabilistic
-movement primitives (ProMPs) used in the original paper. We conduct a comparative
-analysis of our approach against state-of-the-art deep RL and RL with MPs methods, and
-demonstrate improved performance with fewer samples in sophisticated, sparse rewarded
-settings, as well as settings that require replanning.
+We introduce a novel deep reinforcement learning (RL) approach called Movement Prmitive-
+based Planning Policy (MP3). By integrating movement primitives (MPs) into the deep RL
+framework, MP3 enables the generation of smooth trajectories throughout the whole learning 
+process while effectively learning from sparse and non-Markovian rewards. Additionally,
+MP3 maintains the capability to adapt to changes in the environment during execution.
+Although many early successes in robot RL have been achieved by combining RL with
+MPs, these approaches are often limited to learning single stroke-based motions, lacking
+the ability to adapt to task variations or adjust motions during execution. Building upon
+our previous work, which introduced an episode-based RL method for the non-linear adaptation of 
+MP parameters to different task variations, this paper extends the approach to
+incorporating replanning strategies. This allows adaptation of the MP parameters throughout 
+motion execution, addressing the lack of online motion adaptation in stochastic domains
+requiring feedback. We compared our approach against state-of-the-art deep RL and RL
+with MPs methods. The results demonstrated improved performance in sophisticated,
+sparse reward settings and in domains requiring replanning.
 
 
 ## MP3-BB: Black-Box Reinforcement Learning
@@ -54,7 +46,7 @@ as a black-box optimization problem. We refer this setting as **MP3-BB**.
                 src3="img/Videos/table_tennis/TT4D_BBRL_TRPL.mp4" title3="MP3-BB">}}
 ## MP3-Replan: Replanning with Movement Primititves
 By incorperating dynamic-based movement primitives, such as DMPs (Dynamic Movement Primitives) and ProDMPs (Probabilistic Dynamic Movement Primitives),
-into our framework, we gain the ability to adapt the movement primitives during online execution. This capability enables us to effectively 
+into our framework, we gain the ability to adapt the motion during online execution. This capability enables us to effectively 
 handle unforeseen changes in the environment, such as shifting target positions or external perturbations. 
 In constrat to the black-box setting **MP3-BB**, we specifically designate this setting as **MP3-Replan**.
 ### Box-Pushing with Changing Targets
