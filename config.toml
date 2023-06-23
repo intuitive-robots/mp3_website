@@ -12,7 +12,7 @@ pygmentsCodeFences = true
 #googleAnalytics = "XXX"
 
 [Params]
-  homeTitle = "MP3: Movement Pritimitve-Based (Re-)Planning Policies" # Set a different text for the header on the home page
+  homeTitle = "MP3: Movement Primitive-Based (Re-)Planning Policies" # Set a different text for the header on the home page
   subtitle = " "
   #mainSections = ["post","posts"]
   logo = "img/IRL_Logo_Icon_blue.svg" # Expecting square dimensions
