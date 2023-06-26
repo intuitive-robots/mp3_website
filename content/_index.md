@@ -3,7 +3,7 @@
 [//]: # ({{<image src1="logos/Logo_KIT.svg" src2= "logos/IRL_Logo_Light_blue.svg" src3="logos/canvas.png">}})
 {{< doublevideo src1="img/bbrl_beerpong.mp4" src2="img/TableTennis4D_1-43.mp4">}}
 # Abstract
-We introduce a novel deep reinforcement learning (RL) approach called Movement Prmitive-
+We introduce a novel deep reinforcement learning (RL) approach called Movement Primitive-
 based Planning Policy (MP3). By integrating movement primitives (MPs) into the deep RL
 framework, MP3 enables the generation of smooth trajectories throughout the whole learning 
 process while effectively learning from sparse and non-Markovian rewards. Additionally,
